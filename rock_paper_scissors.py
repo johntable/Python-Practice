@@ -32,6 +32,8 @@ signs = [rock, paper, scissors]
 p_choice = int(
     input("What do you choose? Type 0 for Rock, 1 for Paper, or 2 for Scissors.\n")
 )
+if (p_choice < 0) or (p_choice > 2):
+    exit()
 player = signs[p_choice]
 print(player)
 
