@@ -1,18 +1,15 @@
-def greet():
-    print("hello")
-    print("surprise")
-    print("motherfucker")
+programming_dictionary = {
+    "Bug": "An error in a program that prevents the program from running as expected.",
+    "Function": "A piece of code that you can easily call over and over again.",
+}
+
+print(programming_dictionary["Function"])
 
 
-greet()
+programming_dictionary["Loop"] = "The action of doing something over and over again."
 
+print(programming_dictionary)
 
-def greet_with(name, location):
-    print(f"hello, {name} in the {location}")
-    print(f"surprise, {name} in the {location}")
-    print(f"motherfucker, {name} in the {location}")
-
-
-greet_with("John", "The Abyss")
-
-greet_with(location="your mom", name="motherucker")
+for key in programming_dictionary:
+    print(key)
+    print(programming_dictionary[key])
