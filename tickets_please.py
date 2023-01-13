@@ -11,4 +11,4 @@ if height >= 120:
     else:
         print("Adult tickets are $12.")
 else:
-    print("You're too short, motherfucker! HAHAHAHAHAHAAHA")
+    print("You're too short!")
