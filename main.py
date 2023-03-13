@@ -1,15 +1,12 @@
-programming_dictionary = {
-    "Bug": "An error in a program that prevents the program from running as expected.",
-    "Function": "A piece of code that you can easily call over and over again.",
-}
-
-print(programming_dictionary["Function"])
+# Functions with Outputs
 
 
-programming_dictionary["Loop"] = "The action of doing something over and over again."
+def format_name(f_name, l_name):
+    name = f_name + " " + l_name
+    return name.title()
 
-print(programming_dictionary)
 
-for key in programming_dictionary:
-    print(key)
-    print(programming_dictionary[key])
+first = str(input("First name: "))
+last = str(input("Last name: "))
+
+print(format_name(first, last))
