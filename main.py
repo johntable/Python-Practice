@@ -2,11 +2,13 @@
 
 
 def format_name(f_name, l_name):
-    name = f_name + " " + l_name
-    return name.title()
+    """Correctly capatilizes and formats first and last name in
+    a name and prints the two inputs in one line"""
+    if f_name == "" or l_name == "":
+        return ""
+    formtted_f_name = f_name.title()
+    formatted_l_name = l_name.title()
+    return f"{formtted_f_name} {formatted_l_name}"
 
 
-first = str(input("First name: "))
-last = str(input("Last name: "))
-
-print(format_name(first, last))
+format_name("joHn", "tabeliSma")
