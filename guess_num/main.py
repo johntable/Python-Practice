@@ -1,20 +1,18 @@
 from guess_art import logo 
 import os, random
-modes = ['easy','hard']
-
 # Game function
 def game():
     # Compares the guess number with the true number
     def compare(guess_num, tru_num):
         if (guess_num == tru_num):
-            print(f'You got it! {guess_num} is my number: {tru_num}')
+            print(f'You got it! {guess_num} is my number!')
             print(f'You had {guesses-1} guess(es) remaining')
             return -guesses
         elif(guess_num > tru_num):
-            print(f'Guess: {guess_num}. Your guess is too high.')
+            print(f'Previous guess: {guess_num}. \nYour guess is too high.')
             return -1 
         elif(guess_num < tru_num):
-            print(f'Guess: {guess_num}. Your guess is too low.')
+            print(f'Previous guess: {guess_num}. \nYour guess is too low.')
             return -1
 
     # Gives the user 10 or 5 guesses based on difficulty
@@ -28,16 +26,14 @@ def game():
     guesses = -1
     the_num = random.randint(1,100)
     print(logo)
+    modes = ['easy','hard']
+    difficulty = ''
 
     # Difficulty choice section
-    difficulty = input('''Welcome to the Number Guessing Game!!!
-Choose a difficulty. Type \'easy\' or \'hard\': 
-''').lower()
-    if difficulty not in modes:
-        difficulty = input('''Invalid Input.
-Welcome to the Number Guessing Game!!!
-Choose a difficulty. Type \'easy\' or \'hard\': 
-''').lower()
+    while difficulty not in modes:
+        print('Welcome to the Number Guessing Game!!!')
+        print('Choose a difficulty.')
+        difficulty = input('Type \'easy\' or \'hard\': ').lower()
     guesses = choose_mode(difficulty)
 
     # Game loop
