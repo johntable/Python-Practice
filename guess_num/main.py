@@ -8,7 +8,7 @@ def game():
     def compare(guess_num, tru_num):
         if (guess_num == tru_num):
             print(f'You got it! {guess_num} is my number: {tru_num}')
-            print(f'You had {guesses} remaining')
+            print(f'You had {guesses-1} guess(es) remaining')
             return -guesses
         elif(guess_num > tru_num):
             print(f'Guess: {guess_num}. Your guess is too high.')
