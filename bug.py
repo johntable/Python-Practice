@@ -1,7 +1,7 @@
-try: 
-    age = int(input('What is your age? '))
-except ValueError:
-    print('Invalid Input. Please enter a number.')
-    age = int(input('What is your age? '))
-if age > 18:
-    print(f'You can drive, drink, go to jail (preferably not at the same time) at age {age}')
+words_per_page = 0
+pages = int(input('Number of pages: '))
+words_per_page = int(input('Number of words per page: '))
+total_words = pages * words_per_page
+print(f'Pages = {pages}')
+print(f'Words per page = {words_per_page}')
+print(f'Total words = {total_words}')
